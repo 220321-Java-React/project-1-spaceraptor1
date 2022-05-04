@@ -1,11 +1,34 @@
 package com.revature;
 
+import java.sql.Connection;
+import java.sql.SQLException;
+
+import com.revature.controllers.LoginController;
+import com.revature.controllers.RequestController;
+import com.revature.utils.ConnectionUtil;
+
+import io.javalin.Javalin;
+
 public class Launcher {
 
     public static void main(String[] args) {
+    	try(Connection conn = ConnectionUtil.getConnection()){
+			System.out.println("CONNECTION SUCCESSFUL :)");
+		} catch (SQLException e) { //if creating this connection fails... catch the exception and print the stack trace
+			System.out.println("connection failed... :(");
+			e.printStackTrace();
+		}
     	
-    	//here we go again... have fun!!
+    	LoginController lc = new LoginController();
+    	RequestController rc = new RequestController();
     	
+    	Javalin app = Javalin.create(
+				config -> {
+					config.enableCorsForAllOrigins(); 
+				}
+			).start(3005);
+    	app.post("/login", lc.loginHandler);
+    	app.get("/myReqs", rc.requestHandler);
     	/*
     	  
     	  

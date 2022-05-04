@@ -1,0 +1,28 @@
+{
+	"folders": [
+		{
+			"path": "."
+		},
+		{
+			"path": "..\\..\\..\\be_demos\\myP1Demo\\FrontEnd"
+		},
+		{
+			"path": "..\\..\\..\\be_demos\\demos\\P1Demo\\FrontEnd"
+		},
+		{
+			"path": "..\\..\\..\\be_demos\\demos\\Week5"
+		},
+		{
+			"path": "..\\..\\..\\myVS"
+		},
+		{
+			"path": "..\\..\\..\\..\\your-app-name"
+		},
+		{
+			"path": "..\\..\\..\\be_demos\\demos\\Week7\\hello-react"
+		}
+	],
+	"settings": {
+		"liveServer.settings.multiRootWorkspaceName": "front end"
+	}
+}

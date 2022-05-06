@@ -28,7 +28,7 @@ public class Launcher {
 				}
 			).start(3005);
     	app.post("/login", lc.loginHandler);
-    	app.get("/myReqs", rc.requestHandler);
+    	app.post("/myReqs", rc.requestHandler);
     	/*
     	  
     	  

@@ -65,5 +65,5 @@ values (500.23,1,1,2),
 		(150,2,1,1);
 
 select * from users;
-select * from reimb where author != 1;
+select * from reimb;
 select * from users where username = user;

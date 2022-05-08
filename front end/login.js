@@ -34,8 +34,11 @@ async function login(){
        //THIS IS PROBABLY WHERE YOUR REDIRECT WOULD BE IF USING MULTIPLE HTML PAGES
        //don't be intimidated, it's an easy google :)
        sessionStorage.setItem('user',JSON.stringify(data));
-       window.location.replace("employee.html");
-        
+       if(data.roleID === 1){
+            window.location.replace("employee.html");
+       }else if(data.roleID === 2){
+            window.location.replace("manager.html");
+       }
    } else {
     console.log("failed");
        document.getElementById("welcomeHead").innerText="Login failed! Try Again";

@@ -2,13 +2,13 @@ package com.revature.models;
 
 public class Reimb {
 	private int id;
-	private int amount;
+	private double amount;
 	private int author;
 	private int resolver;
 	private int status;
 	private int type;
 	
-	public Reimb(int id, int amount, int author, int resolver, int status, int type) {
+	public Reimb(int id, double amount, int author, int resolver, int status, int type) {
 		super();
 		this.id = id;
 		this.amount = amount;
@@ -18,12 +18,11 @@ public class Reimb {
 		this.type = type;
 	}
 
-	public Reimb(int amount, int author, int resolver, int status, int type) {
+	public Reimb(double amount, int author, int type) {
 		super();
 		this.amount = amount;
 		this.author = author;
-		this.resolver = resolver;
-		this.status = status;
+		this.status = 1;
 		this.type = type;
 	}
 
@@ -35,11 +34,11 @@ public class Reimb {
 		this.id = id;
 	}
 
-	public int getAmount() {
+	public double getAmount() {
 		return amount;
 	}
 
-	public void setAmount(int amount) {
+	public void setAmount(double amount) {
 		this.amount = amount;
 	}
 

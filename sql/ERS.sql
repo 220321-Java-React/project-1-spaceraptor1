@@ -61,9 +61,11 @@ values ('username','password','tom','smith','tom@email',1),
 
 insert into reimb(amount, author, status_fk, type_fk)
 values (500.23,1,1,2),
-		(25.12,1,2,3),
 		(150,2,1,1);
 
-select * from users;
-select * from reimb;
+insert into reimb(amount, author, status_fk, type_fk, resolver)
+values	(25.12,1,2,3,2);
+	
+--select * from users;
+select * from reimb where author != 1 and status_fk = 1;
 select * from users where username = user;

@@ -9,7 +9,7 @@ import com.revature.models.User;
 
 public class ReimbDTO {
 	private int id;
-	private int amount;
+	private double amount;
 	private String type;
 	private String status;
 	private String resolver;
@@ -25,10 +25,10 @@ public class ReimbDTO {
 	public void setId(int id) {
 		this.id = id;
 	}
-	public int getAmount() {
+	public double getAmount() {
 		return amount;
 	}
-	public void setAmount(int amount) {
+	public void setAmount(double amount) {
 		this.amount = amount;
 	}
 	public String getType() {
@@ -72,6 +72,28 @@ public class ReimbDTO {
 		}
 		
 	}
+	
+	public ReimbDTO() {
+		super();
+	}
+	public ReimbDTO reimbConstructor(Reimb req) {
+		id = req.getId();
+		amount = req.getAmount();
+		type = types[req.getType()];
+		status = stats[req.getStatus()];
+		//if(req.getResolver() != null) {
+		if(ud.getUserById(req.getAuthor()) != null) {
+			User u = ud.getUserById(req.getAuthor());
+			resolver = u.getFirstname()+" "+u.getLastname();
+			email = u.getEmail();
+		}else {
+			resolver = "";
+			email = "";
+		}
+		return this;
+		
+	}
+	
 	@Override
 	public String toString() {
 		return "ReimbDTO [id=" + id + ", amount=" + amount + ", type=" + type + ", status=" + status + ", resolver="

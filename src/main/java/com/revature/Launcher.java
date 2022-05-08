@@ -29,6 +29,9 @@ public class Launcher {
 			).start(3005);
     	app.post("/login", lc.loginHandler);
     	app.post("/myReqs", rc.requestHandler);
+    	app.put("/create", rc.createHandler);
+    	app.post("/pending",rc.pendingHanler);
+    	app.put("/resolve",rc.resolveHandler);
     	/*
     	  
     	  

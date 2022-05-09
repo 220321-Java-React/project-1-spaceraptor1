@@ -5,13 +5,17 @@ import java.sql.PreparedStatement;
 import java.sql.ResultSet;
 import java.sql.SQLException;
 import java.util.ArrayList;
+import org.apache.logging.log4j.LogManager;
+import org.apache.logging.log4j.Logger;
 
+import com.revature.Launcher;
 import com.revature.dtos.ResolveDTO;
 import com.revature.models.Reimb;
 import com.revature.models.User;
 import com.revature.utils.ConnectionUtil;
 
 public class ReimbDao {
+	Logger log = LogManager.getLogger(ReimbDao.class);
 	public Reimb getReimbById(int id) {
 		try(Connection conn = ConnectionUtil.getConnection()){
 			String sql = "select * from reimb where reimb_id = ?";
@@ -95,8 +99,8 @@ public class ReimbDao {
 			ps.setInt(2, r.getResolver());
 			ps.setInt(3, r.getId());
 			ps.executeUpdate();
-			System.out.println("Finance manager, "+r.getResolver()
-			+" Updated status to "+r.getStatus()+" for reimb "+r.getId());
+			log.info("User id:  "+r.getResolver()
+			+" Updated status to "+r.getStatus()+" for reimbursment id: "+r.getId());
 			return true;
 		} catch (SQLException e) {
 			System.out.println("Error updating status");
@@ -123,7 +127,7 @@ public class ReimbDao {
 			
 			ps.executeUpdate();
 
-			System.out.println("created new request ");
+			log.info("Succesfully created new request ");
 			return true;
 			} catch (SQLException e) {
 				System.out.println("Something went wrong creating new request");

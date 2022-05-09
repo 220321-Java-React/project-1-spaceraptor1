@@ -1,0 +1,79 @@
+2022-05-08 22:25:03 INFO  Launcher:24 - hello
+2022-05-08 22:43:01 INFO  Launcher:24 - hello
+2022-05-08 22:43:46 INFO  LoginController:22 - Login requestLoginDTO [username=username, password=password]
+2022-05-08 22:43:47 INFO  LoginController:29 - Login succesful returning: {"id":1,"username":"username","password":"password","firstname":"tom","lastname":"smith","email":"tom@email","roleID":1}
+2022-05-08 22:49:04 INFO  Launcher:24 - hello
+2022-05-08 22:50:05 INFO  LoginController:23 - Login request: {"username":"username","password":"password"}
+2022-05-08 22:50:06 INFO  LoginController:30 - Login succesful returning: {"id":1,"username":"username","password":"password","firstname":"tom","lastname":"smith","email":"tom@email","roleID":1}
+2022-05-08 23:12:43 INFO  Launcher:24 - hello
+2022-05-08 23:13:10 INFO  LoginController:23 - Login request: {"username":"username","password":"password"}
+2022-05-08 23:13:10 INFO  LoginController:30 - Login succesful returning: {"id":1,"username":"username","password":"password","firstname":"tom","lastname":"smith","email":"tom@email","roleID":1}
+2022-05-08 23:13:10 INFO  RequestController:28 - Request for table 1 data from user id: 1
+2022-05-08 23:13:11 INFO  RequestController:36 - Returning: ReimbDTO [id=1, amount=500.23, type=Travel, status=Pending, resolver=, email=]
+2022-05-08 23:13:11 INFO  RequestController:36 - Returning: ReimbDTO [id=3, amount=25.12, type=Food, status=Approved, resolver=alex proctor, email=taproctor00@gmail.com]
+2022-05-08 23:13:11 INFO  RequestController:36 - Returning: ReimbDTO [id=4, amount=33.33, type=Other, status=Pending, resolver=, email=]
+2022-05-08 23:38:06 INFO  Launcher:24 - hello
+2022-05-08 23:38:25 INFO  LoginController:23 - Login request: {"username":"u","password":"p"}
+2022-05-08 23:38:25 INFO  LoginController:30 - Login succesful returning: {"id":2,"username":"u","password":"p","firstname":"alex","lastname":"proctor","email":"taproctor00@gmail.com","roleID":2}
+2022-05-08 23:38:25 INFO  RequestController:28 - Request for table 1 data from user id: 2
+2022-05-08 23:38:25 INFO  RequestController:66 - Request for table 2 data from user id: 2
+2022-05-08 23:38:26 INFO  RequestController:36 - Returning: ReimbDTO [id=2, amount=150.0, type=Lodging, status=Pending, resolver=, email=]
+2022-05-08 23:38:26 INFO  RequestController:74 - Returning: ReimbDTO [id=1, amount=500.23, type=Travel, status=Pending, resolver=, email=]
+2022-05-08 23:38:26 INFO  RequestController:74 - Returning: ReimbDTO [id=4, amount=33.33, type=Other, status=Pending, resolver=, email=]
+2022-05-08 23:38:40 INFO  RequestController:52 - Request to create new reimbursement: {"type":"1","amount":"233","author":2}
+2022-05-08 23:38:41 INFO  RequestController:28 - Request for table 1 data from user id: 2
+2022-05-08 23:38:41 INFO  RequestController:36 - Returning: ReimbDTO [id=2, amount=150.0, type=Lodging, status=Pending, resolver=, email=]
+2022-05-08 23:38:41 INFO  RequestController:36 - Returning: ReimbDTO [id=5, amount=233.0, type=Lodging, status=Pending, resolver=, email=]
+2022-05-08 23:39:02 INFO  RequestController:91 - Request to resolve pending request: {"id":"4","resolver":2,"status":"2"}
+2022-05-08 23:39:03 INFO  RequestController:66 - Request for table 2 data from user id: 2
+2022-05-08 23:39:03 INFO  RequestController:74 - Returning: ReimbDTO [id=1, amount=500.23, type=Travel, status=Pending, resolver=, email=]
+2022-05-08 23:51:52 INFO  LoginController:23 - Login request: {"username":"u","password":"p"}
+2022-05-08 23:51:52 INFO  LoginController:30 - Login succesful returning: {"id":2,"username":"u","password":"p","firstname":"alex","lastname":"proctor","email":"taproctor00@gmail.com","roleID":2}
+2022-05-08 23:51:52 INFO  RequestController:28 - Request for table 1 data from user id: 2
+2022-05-08 23:51:52 INFO  RequestController:66 - Request for table 2 data from user id: 2
+2022-05-08 23:51:52 INFO  RequestController:36 - Returning: ReimbDTO [id=2, amount=150.0, type=Lodging, status=Pending, resolver=, email=]
+2022-05-08 23:51:53 INFO  RequestController:74 - Returning: ReimbDTO [id=1, amount=500.23, type=Travel, status=Pending, resolver=, email=]
+2022-05-08 23:51:53 INFO  RequestController:36 - Returning: ReimbDTO [id=5, amount=233.0, type=Lodging, status=Pending, resolver=, email=]
+2022-05-08 23:52:07 INFO  RequestController:52 - Request to create new reimbursement: {"type":"2","amount":"1234","author":2}
+2022-05-08 23:52:07 INFO  RequestController:28 - Request for table 1 data from user id: 2
+2022-05-08 23:52:07 INFO  RequestController:36 - Returning: ReimbDTO [id=2, amount=150.0, type=Lodging, status=Pending, resolver=, email=]
+2022-05-08 23:52:07 INFO  RequestController:36 - Returning: ReimbDTO [id=5, amount=233.0, type=Lodging, status=Pending, resolver=, email=]
+2022-05-08 23:52:07 INFO  RequestController:36 - Returning: ReimbDTO [id=6, amount=1234.0, type=Travel, status=Pending, resolver=, email=]
+2022-05-08 23:52:50 INFO  Launcher:24 - hello
+2022-05-08 23:53:31 INFO  LoginController:23 - Login request: {"username":"u","password":"p"}
+2022-05-08 23:53:31 INFO  LoginController:30 - Login succesful returning: {"id":2,"username":"u","password":"p","firstname":"alex","lastname":"proctor","email":"taproctor00@gmail.com","roleID":2}
+2022-05-08 23:53:31 INFO  RequestController:28 - Request for table 1 data from user id: 2
+2022-05-08 23:53:31 INFO  RequestController:66 - Request for table 2 data from user id: 2
+2022-05-08 23:53:31 INFO  RequestController:36 - Returning: ReimbDTO [id=2, amount=150.0, type=Lodging, status=Pending, resolver=, email=]
+2022-05-08 23:53:32 INFO  RequestController:36 - Returning: ReimbDTO [id=5, amount=233.0, type=Lodging, status=Pending, resolver=, email=]
+2022-05-08 23:53:32 INFO  RequestController:74 - Returning: ReimbDTO [id=1, amount=500.23, type=Travel, status=Pending, resolver=, email=]
+2022-05-08 23:53:32 INFO  RequestController:36 - Returning: ReimbDTO [id=6, amount=1234.0, type=Travel, status=Pending, resolver=, email=]
+2022-05-08 23:53:42 INFO  RequestController:52 - Request to create new reimbursement: {"type":"1","amount":"5645744","author":2}
+2022-05-08 23:53:42 INFO  ReimbDao:130 - Succesfully created new request 
+2022-05-08 23:53:42 INFO  RequestController:28 - Request for table 1 data from user id: 2
+2022-05-08 23:53:42 INFO  RequestController:36 - Returning: ReimbDTO [id=2, amount=150.0, type=Lodging, status=Pending, resolver=, email=]
+2022-05-08 23:53:42 INFO  RequestController:36 - Returning: ReimbDTO [id=5, amount=233.0, type=Lodging, status=Pending, resolver=, email=]
+2022-05-08 23:53:42 INFO  RequestController:36 - Returning: ReimbDTO [id=6, amount=1234.0, type=Travel, status=Pending, resolver=, email=]
+2022-05-08 23:53:42 INFO  RequestController:36 - Returning: ReimbDTO [id=7, amount=5645744.0, type=Lodging, status=Pending, resolver=, email=]
+2022-05-08 23:54:39 INFO  RequestController:91 - Request to resolve pending request: {"id":"1","resolver":2,"status":"3"}
+2022-05-08 23:54:39 INFO  ReimbDao:102 - User id:  2 Updated status to 3 for reimbursment id: 1
+2022-05-08 23:54:39 INFO  RequestController:66 - Request for table 2 data from user id: 2
+2022-05-09 10:17:56 INFO  Launcher:24 - hello
+2022-05-09 10:18:32 INFO  LoginController:23 - Login request: {"username":"u","password":"p"}
+2022-05-09 10:18:32 INFO  LoginController:30 - Login succesful returning: {"id":2,"username":"u","password":"p","firstname":"Alex","lastname":"Proctor","email":"taproctor00@gmail.com","roleID":2}
+2022-05-09 10:18:33 INFO  RequestController:28 - Request for table 1 data from user id: 2
+2022-05-09 10:18:33 INFO  RequestController:66 - Request for table 2 data from user id: 2
+2022-05-09 10:18:33 INFO  RequestController:36 - Returning: ReimbDTO [id=2, amount=150.0, type=Lodging, status=Pending, resolver=, email=]
+2022-05-09 10:18:33 INFO  RequestController:74 - Returning: ReimbDTO [id=1, amount=500.23, type=Travel, status=Pending, resolver=, email=]
+2022-05-09 10:18:33 INFO  RequestController:74 - Returning: ReimbDTO [id=3, amount=23.45, type=Food, status=Pending, resolver=, email=]
+2022-05-09 10:18:33 INFO  RequestController:74 - Returning: ReimbDTO [id=4, amount=223.4, type=Travel, status=Pending, resolver=, email=]
+2022-05-09 10:24:52 INFO  LoginController:23 - Login request: {"username":"email@gmail.com","password":"b"}
+2022-05-09 10:24:53 WARN  LoginController:36 - Login failed
+2022-05-09 10:25:15 INFO  LoginController:23 - Login request: {"username":"a","password":"b"}
+2022-05-09 10:25:15 INFO  LoginController:30 - Login succesful returning: {"id":3,"username":"a","password":"b","firstname":"Sam","lastname":"Samothy","email":"email@gmail.com","roleID":2}
+2022-05-09 10:25:16 INFO  RequestController:28 - Request for table 1 data from user id: 3
+2022-05-09 10:25:16 INFO  RequestController:66 - Request for table 2 data from user id: 3
+2022-05-09 10:25:16 INFO  RequestController:36 - Returning: ReimbDTO [id=3, amount=23.45, type=Food, status=Pending, resolver=, email=]
+2022-05-09 10:25:16 INFO  RequestController:74 - Returning: ReimbDTO [id=1, amount=500.23, type=Travel, status=Pending, resolver=, email=]
+2022-05-09 10:25:16 INFO  RequestController:74 - Returning: ReimbDTO [id=2, amount=150.0, type=Lodging, status=Pending, resolver=, email=]
+2022-05-09 10:25:17 INFO  RequestController:74 - Returning: ReimbDTO [id=4, amount=223.4, type=Travel, status=Pending, resolver=, email=]

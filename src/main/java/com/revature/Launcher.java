@@ -6,6 +6,8 @@ import java.sql.SQLException;
 import com.revature.controllers.LoginController;
 import com.revature.controllers.RequestController;
 import com.revature.utils.ConnectionUtil;
+import org.apache.logging.log4j.LogManager;
+import org.apache.logging.log4j.Logger;
 
 import io.javalin.Javalin;
 
@@ -18,7 +20,8 @@ public class Launcher {
 			System.out.println("connection failed... :(");
 			e.printStackTrace();
 		}
-    	
+    	Logger log = LogManager.getLogger(Launcher.class);
+    	log.info("hello");
     	LoginController lc = new LoginController();
     	RequestController rc = new RequestController();
     	
